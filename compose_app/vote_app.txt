@@ -1,0 +1,8 @@
+Пример построения приложения взят отсюда:
+    https://github.com/dockersamples/example-voting-app.git
+
+В файле compose между собой связаны контейнеры vote и redis
+					       result и db
+					       worker с db и redis
+
+Приложение поднимается командой docker-compose up

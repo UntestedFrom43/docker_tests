@@ -1,0 +1,33 @@
+#Containers keys
+
+--- 
+
+db: 
+  image: "postgres:9.4"
+
+redis: 
+  image: redis
+
+vote: 
+  #image: voting-app
+  build: ./vote
+  links: 
+    - redis
+  ports: 
+    - "5000:80"
+
+result:
+  #image: result-app
+  build: ./result
+  links: 
+    - db
+  ports: 
+    - "5001:80"
+
+worker: 
+  #image: worker
+  build: ./worker
+  links: 
+    - db
+    - redis
+
