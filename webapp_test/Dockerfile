@@ -9,4 +9,4 @@ RUN pip3 install flask
 #Copy to opt
 COPY app.py /opt/app.py
 #Entrypoint to start
-ENTRYPOINT FLASK_APP=app.py flask run --host=0.0.0.0 --port=5000
+ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=5000
