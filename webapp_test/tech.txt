@@ -1,0 +1,8 @@
+#Сборка билда
+$ dicker build .
+#Тэгирование
+docker tag {{ID}} teg/tag_name
+#Запуск
+docker run {{image}}
+#Проверка
+ip:5000
